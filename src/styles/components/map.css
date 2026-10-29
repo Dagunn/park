@@ -1,0 +1,55 @@
+@layer components {
+  /* Подложка и отметки в одном холсте, чтобы масштабировались вместе.
+     Центр окна 1088×768 приходится на точку 903, 401 подложки */
+  .map-layout {
+    @apply grid grid-cols-1 xl:grid-cols-[634fr_1046fr];
+  }
+
+  .map-filter {
+    @apply relative flex flex-col gap-12 overflow-hidden bg-surface px-panel-x pt-[60px] pb-panel-x xl:gap-[72px];
+  }
+
+  .map-view {
+    @apply relative aspect-4/5 overflow-hidden bg-surface md:aspect-1088/768 xl:mt-31 xl:-mr-10.5 xl:aspect-auto xl:h-192;
+    container-type: size;
+  }
+
+  .map-zoom {
+    @apply absolute right-4 bottom-4 flex flex-col gap-3 md:top-1/2 md:right-2.5 md:bottom-auto md:-translate-y-1/2 md:gap-4;
+  }
+
+  .map-canvas {
+    --map-scale: max(100cqw / 1088, 100cqh / 768);
+
+    @apply absolute aspect-[1807/803];
+    width: calc(1807 * var(--map-scale));
+    left: calc(50% - 903 * var(--map-scale));
+    top: calc(50% - 401 * var(--map-scale));
+  }
+
+  /* --x / --y: координаты на подложке (острие пина, центр кластера) */
+  .map-marker {
+    @apply absolute origin-top-left transition-[opacity,scale] duration-300;
+    left: calc(var(--x) / 1807 * 100%);
+    top: calc(var(--y) / 803 * 100%);
+  }
+
+  .map-pin {
+    --size: clamp(28px, 48 * var(--map-scale), 48px);
+    @apply block size-(--size) max-w-none -translate-x-3/8 -translate-y-23/24;
+  }
+
+  .map-cluster {
+    --size: clamp(24px, 36 * var(--map-scale), 36px);
+    @apply flex size-(--size) -translate-1/2 items-center justify-center rounded-full bg-primary text-caption text-white shadow-pin;
+  }
+
+  /* data-filtered и data-match ставятся из main.js */
+  [data-filtered] .map-marker {
+    @apply opacity-30;
+  }
+
+  [data-filtered] .map-marker[data-match] {
+    @apply z-10 scale-125 opacity-100;
+  }
+}

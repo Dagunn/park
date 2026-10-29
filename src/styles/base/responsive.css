@@ -1,0 +1,140 @@
+@theme {
+  --text-hero: 40px;
+  --text-hero--line-height: 40px;
+  --text-hero--font-weight: 500;
+  --text-section: 32px;
+  --text-section--line-height: 36px;
+  --text-section--font-weight: 500;
+  --text-heading: 28px;
+  --text-heading--line-height: 32px;
+  --text-heading--font-weight: 500;
+  --text-card: 20px;
+  --text-card--line-height: 24px;
+  --text-card--font-weight: 500;
+  --text-lead: 18px;
+  --text-lead--line-height: 24px;
+  --text-lead--font-weight: 400;
+  --text-title: 18px;
+  --text-title--line-height: 22px;
+  --text-title--font-weight: 500;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 22px;
+  --text-body-lg--font-weight: 400;
+  --text-button: 16px;
+  --text-button--line-height: 20px;
+  --text-button--font-weight: 500;
+  --text-body: 16px;
+  --text-body--line-height: 22px;
+  --text-body--font-weight: 500;
+  --text-paragraph: 16px;
+  --text-paragraph--line-height: 20px;
+  --text-paragraph--font-weight: 400;
+  --text-caption: 14px;
+  --text-caption--line-height: 18px;
+  --text-caption--font-weight: 500;
+  --text-label: 12px;
+  --text-label--line-height: 14px;
+  --text-label--font-weight: 500;
+
+  --spacing-gutter: 16px;
+  --spacing-section: 56px;
+  --spacing-section-sm: 48px;
+  --spacing-section-end: 40px;
+  --spacing-heading: 20px;
+  --spacing-heading-lg: 32px;
+  --spacing-grid: 16px;
+  --spacing-card: 16px;
+  --spacing-panel-x: 20px;
+  --spacing-panel-y: 40px;
+  --spacing-hero: 20px;
+
+  --spacing-control: 48px;
+  --spacing-control-sm: 36px;
+  --spacing-chip: 40px;
+  --spacing-icon: 20px;
+
+  --radius-panel: 40px;
+  --notch-scale: 0.45;
+}
+
+@media (width >= theme(--breakpoint-md)) {
+  :root {
+    --text-hero: 64px;
+    --text-hero--line-height: 62px;
+    --text-section: 52px;
+    --text-section--line-height: 60px;
+    --text-heading: 40px;
+    --text-heading--line-height: 46px;
+    --text-card: 22px;
+    --text-card--line-height: 26px;
+    --text-lead: 20px;
+    --text-lead--line-height: 26px;
+    --text-title: 20px;
+    --text-title--line-height: 24px;
+    --text-body-lg: 20px;
+    --text-body-lg--line-height: 24px;
+    --text-button: 18px;
+    --text-button--line-height: 22px;
+
+    --spacing-gutter: 32px;
+    --spacing-section: 80px;
+    --spacing-section-sm: 64px;
+    --spacing-section-end: 56px;
+    --spacing-heading: 24px;
+    --spacing-heading-lg: 40px;
+    --spacing-grid: 20px;
+    --spacing-card: 20px;
+    --spacing-panel-x: 40px;
+    --spacing-panel-y: 64px;
+    --spacing-hero: 40px;
+
+    --spacing-control: 56px;
+    --spacing-control-sm: 40px;
+    --spacing-chip: 48px;
+    --spacing-icon: 24px;
+
+    --radius-panel: 64px;
+    --notch-scale: 0.7;
+  }
+}
+
+@media (width >= theme(--breakpoint-lg)) {
+  :root {
+    --spacing-gutter: 48px;
+  }
+}
+
+@media (width >= theme(--breakpoint-xl)) {
+  :root {
+    --text-hero: 88px;
+    --text-hero--line-height: 82px;
+    --text-section: 72px;
+    --text-section--line-height: 82px;
+    --text-heading: 48px;
+    --text-heading--line-height: 54px;
+    --text-card: 24px;
+    --text-card--line-height: 28px;
+    --text-lead: 24px;
+    --text-lead--line-height: 28px;
+
+    --spacing-gutter: 80px;
+    --spacing-section: 120px;
+    --spacing-section-sm: 100px;
+    --spacing-section-end: 80px;
+    --spacing-heading: 32px;
+    --spacing-heading-lg: 60px;
+    --spacing-grid: 24px;
+    --spacing-panel-x: 80px;
+    --spacing-panel-y: 120px;
+    --spacing-hero: 120px;
+
+    --radius-panel: 120px;
+    --notch-scale: 1;
+  }
+}
+
+@media (width >= theme(--breakpoint-2xl)) {
+  :root {
+    --spacing-gutter: 120px;
+  }
+}

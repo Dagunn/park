@@ -1,0 +1,51 @@
+@layer components {
+  .label {
+    @apply text-label leading-4 uppercase;
+  }
+
+  .tag {
+    @apply inline-block h-tag max-w-full truncate rounded-tag bg-surface px-2 text-label leading-6 text-primary uppercase;
+  }
+
+  .tag-list {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .tag-list > li {
+    @apply max-w-full;
+  }
+
+  .chip {
+    @apply inline-flex h-chip cursor-pointer items-center rounded-full border border-surface bg-white px-4.5 text-body text-black;
+    @apply hover:border-primary has-checked:border-primary has-checked:bg-primary has-checked:text-white;
+    @apply has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-primary;
+  }
+
+  .chip-social {
+    @apply inline-flex h-chip items-center gap-0 rounded-pill bg-white/10 pr-5 text-body text-white hover:bg-white/20;
+  }
+
+  .chip-social .icon {
+    @apply size-chip;
+    padding: calc((var(--spacing-chip) - 20px) / 2);
+  }
+
+  .calendar-day {
+    @apply flex w-16 shrink-0 cursor-pointer flex-col items-center gap-0.5 rounded-button py-4 text-title text-primary;
+    @apply hover:bg-white aria-pressed:bg-primary aria-pressed:text-white;
+  }
+
+  .calendar-day small {
+    @apply text-label text-ink/30 uppercase;
+  }
+
+  .tag-list-scroll {
+    @variant max-md {
+      @apply -mx-gutter flex-nowrap overflow-x-auto px-gutter scrollbar-none;
+
+      & > * {
+        @apply shrink-0;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@layer components {
+  .btn {
+    @apply inline-flex h-control shrink-0 cursor-pointer items-center justify-center gap-2 rounded-button px-6 text-button whitespace-nowrap;
+    @apply disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-primary px-12 text-white hover:bg-black;
+  }
+
+  .btn-light {
+    @apply bg-white text-black hover:bg-surface;
+  }
+
+  .btn-glass {
+    @apply bg-white/10 text-white backdrop-blur-glass hover:bg-white/20;
+  }
+
+  .btn-ghost {
+    @apply text-black hover:text-primary;
+  }
+
+  .btn-arrow {
+    @apply pr-5.5;
+  }
+
+  .btn-social {
+    @apply size-chip rounded-full bg-primary px-0 text-white hover:bg-black;
+  }
+
+  .btn-icon {
+    @apply size-control rounded-full px-0;
+  }
+
+  .btn-icon-sm {
+    @apply size-control-sm rounded-full px-0;
+  }
+
+  .icon {
+    @apply inline-flex size-icon shrink-0 items-center justify-center;
+  }
+
+  .icon svg {
+    @apply size-full;
+  }
+}

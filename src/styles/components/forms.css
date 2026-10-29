@@ -1,0 +1,23 @@
+@layer components {
+  .field {
+    @apply h-control w-full border-b border-primary bg-transparent py-4 text-body text-black placeholder:text-ink/30;
+    @apply focus:outline-none focus-visible:border-b-2;
+  }
+
+  .select,
+  .select-line {
+    @apply cursor-pointer appearance-none bg-no-repeat;
+    background-image: url("../assets/icons/chevron-down.svg");
+    background-size: 24px;
+  }
+
+  .select {
+    @apply inline-flex h-control min-w-[226px] items-center rounded-button bg-white py-4 pr-[52px] pl-5 text-button text-black;
+    background-position: right 16px center;
+  }
+
+  .select-line {
+    @apply flex h-control w-full items-center border-b border-black/20 bg-transparent pr-8 text-body text-black uppercase;
+    background-position: right center;
+  }
+}

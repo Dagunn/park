@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  @@include('src/partials/head.html')
+  <title>Парки Москвы — афиша, события и прогулки в парках города</title>
+  <meta name="description" content="Афиша мероприятий, новости и маршруты по паркам Москвы. Выберите парк на карте по округу и интересам: спорт, культура, отдых с детьми.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Парки Москвы">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Парки Москвы — афиша, события и прогулки в парках города">
+  <meta property="og:description" content="Афиша мероприятий, новости и маршруты по паркам Москвы. Выберите парк на карте по округу и интересам.">
+  <meta property="og:image" content="assets/og/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Парки Москвы — пруд с лодками и катамаранами в парке">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="relative overflow-x-clip">
+  <div class="pattern pattern-page" aria-hidden="true"></div>
+
+  @@include('src/partials/header.html')
+
+  <!-- Оставил место для хлебных крошек, вне main. Сейчас это одностраничный ленд и смысла нет в крошках, хоть в задании и было написано, но не совсем правильно получается. -->
+
+  <main>
+    @@include('src/partials/sections/hero.html')
+    @@include('src/partials/sections/spotlight.html')
+    @@include('src/partials/sections/hobbies.html')
+    @@include('src/partials/sections/events.html')
+    @@include('src/partials/sections/map.html')
+    @@include('src/partials/sections/news.html')
+    @@include('src/partials/sections/journal.html')
+    @@include('src/partials/sections/about.html')
+    @@include('src/partials/sections/partners.html')
+  </main>
+
+  @@include('src/partials/footer.html')
+</body>
+
+</html>

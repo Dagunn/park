@@ -1,0 +1,89 @@
+<section class="section-sm bg-surface pb-5" aria-labelledby="hobbies-title" data-slider>
+  <div class="container-content">
+    <div class="section-head md:items-end">
+      <h2 id="hobbies-title" class="section-title">Ваши увлечения<br> в Парках Москвы</h2>
+      <div class="flex gap-4 md:pb-1.5">
+        <button class="btn btn-icon btn-light" type="button" aria-label="Назад" data-slider-prev>
+          <span class="icon">@@include('src/assets/icons/arrow-long-left.svg')</span>
+        </button>
+        <button class="btn btn-icon btn-light" type="button" aria-label="Вперед" data-slider-next>
+          <span class="icon">@@include('src/assets/icons/arrow-long-right.svg')</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="slider" data-slider-track>
+      <article class="slider-item card-hobby text-accent-cyan card-bg-accent-cyan">
+        <span class="decor decor-hobby-1" aria-hidden="true"></span>
+        <div class="card-hobby-media">
+          <img src="assets/images/hobby-1.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw" width="402" height="580" alt="" loading="lazy" decoding="async" class="object-cover">
+        </div>
+        <div class="card-hobby-body text-white">
+          <p class="label">Для детей</p>
+          <h3 class="text-card"><a class="after:absolute after:inset-0" href="#">Не только детские площадки</a></h3>
+        </div>
+      </article>
+
+      <article class="slider-item card-hobby text-primary">
+        <span class="decor decor-hobby-2" aria-hidden="true"></span>
+        <div class="card-hobby-media">
+          <img src="assets/images/hobby-2.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw" width="402" height="580" alt="" loading="lazy" decoding="async" class="object-cover">
+        </div>
+        <div class="card-hobby-body text-white">
+          <p class="label">Для спорта</p>
+          <h3 class="text-card"><a class="after:absolute after:inset-0" href="#">А вы знали, что у нас есть корты?</a></h3>
+        </div>
+      </article>
+
+      <article class="slider-item card-hobby text-accent-orange card-bg-accent-orange">
+        <span class="decor decor-hobby-3" aria-hidden="true"></span>
+        <div class="card-hobby-media">
+          <img src="assets/images/hobby-3.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw" width="402" height="580" alt="" loading="lazy" decoding="async" class="object-cover">
+        </div>
+        <div class="card-hobby-body text-white">
+          <p class="label">Для отдыха</p>
+          <h3 class="text-card"><a class="after:absolute after:inset-0" href="#">Пикники для компаний или романтические прогулки</a></h3>
+        </div>
+      </article>
+
+      <article class="slider-item card-hobby text-accent-violet card-bg-accent-violet">
+        <span class="decor decor-hobby-4" aria-hidden="true"></span>
+        <div class="card-hobby-media">
+          <img src="assets/images/hobby-4.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw" width="402" height="580" alt="" loading="lazy" decoding="async" class="object-cover">
+        </div>
+        <div class="card-hobby-body text-white">
+          <p class="label">Достопримечательности</p>
+          <h3 class="text-card"><a class="after:absolute after:inset-0" href="#">Исторические дворцы, особняки, скульптуры и храмы</a></h3>
+        </div>
+      </article>
+
+      <article class="slider-item card-hobby text-accent-red card-bg-accent-red">
+        <span class="decor decor-hobby-ribbon" aria-hidden="true"></span>
+        <div class="card-hobby-media">
+          <img src="assets/images/hobby-5.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw" width="402" height="580" alt="" loading="lazy" decoding="async" class="object-cover">
+        </div>
+        <div class="card-hobby-body card-tall text-white">
+          <div class="flex flex-col gap-6">
+            <p class="label">Подкасты</p>
+            <h3 class="text-card"><a class="after:absolute after:inset-0" href="#">«Парк звучит»: истории природы и людей</a></h3>
+          </div>
+          <p class="text-paragraph"><time datetime="2026-10-08">8 октября 2026</time></p>
+        </div>
+      </article>
+
+      <article class="slider-item card-hobby text-accent-lime card-bg-accent-lime">
+        <span class="decor decor-hobby-ribbon-alt" aria-hidden="true"></span>
+        <div class="card-hobby-media">
+          <img src="assets/images/hobby-5.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw" width="402" height="580" alt="" loading="lazy" decoding="async" class="object-cover">
+        </div>
+        <div class="card-hobby-body card-tall text-white">
+          <div class="flex flex-col gap-6">
+            <p class="label">Галерея</p>
+            <h3 class="text-card"><a class="after:absolute after:inset-0" href="#">Цветущая Москва: парки в июне</a></h3>
+          </div>
+          <p class="text-paragraph"><time datetime="2026-09-08">8 сентября 2026</time></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

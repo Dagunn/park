@@ -1,0 +1,26 @@
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-body text-black antialiased wrap-break-word;
+  }
+
+  a,
+  button {
+    @apply transition-colors;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+
+  picture {
+    @apply contents;
+  }
+
+  picture img {
+    @apply block size-full;
+  }
+}

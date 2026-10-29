@@ -1,0 +1,105 @@
+@layer components {
+  .shape-notch {
+    --notch-w: calc(372px * var(--notch-scale));
+    --notch-h: calc(218px * var(--notch-scale));
+
+    @apply overflow-hidden rounded-bl-panel;
+    mask:
+      url("../assets/images/decor/notch.svg") left top / var(--notch-w)
+        var(--notch-h) no-repeat,
+      linear-gradient(#000 0 0) right top / calc(100% - var(--notch-w) + 1px)
+        100% no-repeat,
+      linear-gradient(#000 0 0) left bottom / 100%
+        calc(100% - var(--notch-h) + 1px) no-repeat;
+  }
+
+  .shape-notch-right {
+    @apply rounded-bl-none rounded-br-panel;
+    mask:
+      url("../assets/images/decor/notch-right.svg") right top / var(--notch-w)
+        var(--notch-h) no-repeat,
+      linear-gradient(#000 0 0) left top / calc(100% - var(--notch-w) + 1px)
+        100% no-repeat,
+      linear-gradient(#000 0 0) left bottom / 100%
+        calc(100% - var(--notch-h) + 1px) no-repeat;
+  }
+
+  .shape-notch-hero {
+    --notch-w: calc(420px * var(--notch-scale));
+    --notch-h: calc(245px * var(--notch-scale));
+  }
+
+  .shape-notch-tall {
+    --notch-h: calc(270px * var(--notch-scale));
+  }
+
+  .pattern {
+    --pattern-color: color-mix(in srgb, var(--color-ink) 9%, transparent);
+    --pattern-size: 4124px;
+    --pattern-x: 0px;
+    --pattern-y: 0px;
+
+    @apply pointer-events-none absolute inset-0 bg-(--pattern-color);
+    mask: url("../assets/images/decor/pattern.svg") var(--pattern-x)
+      var(--pattern-y) / var(--pattern-size) no-repeat;
+  }
+
+  .pattern-page {
+    --pattern-color: color-mix(in srgb, var(--color-ink) 4.2%, transparent);
+    --pattern-x: 1074px;
+    --pattern-y: -3238px;
+  }
+
+  .pattern-journal {
+    --pattern-x: -1260px;
+    --pattern-y: -1678px;
+  }
+
+  .pattern-social {
+    --pattern-x: -2326px;
+    --pattern-y: -1908px;
+  }
+
+  .pattern-footer {
+    --pattern-x: 950px;
+    --pattern-y: -3775px;
+  }
+
+  .pattern-bottom {
+    --pattern-x: -3482px;
+    --pattern-y: 155px;
+  }
+
+  .pattern-card {
+    --pattern-color: color-mix(in srgb, var(--color-ink) 15%, transparent);
+    --pattern-size: 2306px;
+    --pattern-x: 50%;
+    --pattern-y: 50%;
+  }
+
+  .decor {
+    @apply pointer-events-none absolute bg-current;
+    mask: var(--decor) center / contain no-repeat;
+  }
+
+  .hero-overlay {
+    @apply pointer-events-none absolute inset-0 bg-hero-base;
+  }
+
+  .hero-overlay img {
+    @apply absolute inset-0 object-cover opacity-0 transition-opacity duration-700;
+  }
+
+  .hero-overlay img[data-active] {
+    @apply opacity-70;
+  }
+
+  .hero-overlay::after {
+    @apply absolute inset-0 mix-blend-multiply content-[""];
+    background: radial-gradient(
+      50% 41.4% at 50% 41.4%,
+      transparent 49%,
+      var(--color-hero-tint) 100%
+    );
+  }
+}

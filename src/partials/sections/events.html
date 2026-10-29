@@ -1,0 +1,198 @@
+<section id="events" class="section bg-fade-from-surface pb-section-end" aria-labelledby="events-title">
+  <div class="container-content">
+    <div class="section-head">
+      <h2 id="events-title" class="section-title">Афиша</h2>
+      <div class="flex gap-3 md:gap-4">
+        <select class="select" name="park" aria-label="Парк" data-select data-width="auto">
+          @@include('src/partials/components/park-options.html')
+        </select>
+        <a class="btn btn-light btn-arrow max-md:size-control max-md:p-0" href="#">
+          <span class="max-md:sr-only">Смотреть все</span>
+          <span class="icon">@@include('src/assets/icons/arrow-long-right.svg')</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Выбранный день: aria-pressed="true" -->
+    <div class="mb-8 flex flex-col gap-2">
+      <p class="label text-ink/30">Октябрь</p>
+      <div class="flex items-center gap-3 xl:justify-between">
+        <ul class="flex flex-1 gap-3 overflow-x-auto scrollbar-none xl:contents">
+          <li><button class="calendar-day" type="button" aria-pressed="false">11<small>Пн</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">12<small>Вт</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">13<small>Ср</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">14<small>Чт</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">15<small>Пт</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">16<small>Сб</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">17<small>Вс</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">18<small>Пн</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">19<small>Вт</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">20<small>Ср</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">21<small>Чт</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">22<small>Пт</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">23<small>Сб</small></button></li>
+          <li><button class="calendar-day" type="button" aria-pressed="false">24<small>Вс</small></button></li>
+        </ul>
+        <button class="btn btn-icon btn-light" type="button" aria-label="Следующие даты">
+          <span class="icon">@@include('src/assets/icons/arrow-right.svg')</span>
+        </button>
+      </div>
+    </div>
+
+    <ul
+      class="tag-list tag-list-scroll mb-8"
+      aria-label="Категории мероприятий">
+      <li><button class="tag text-black" type="button">Кинопоказы</button></li>
+      <li><button class="tag text-black" type="button">Ярмарка</button></li>
+      <li><button class="tag text-black" type="button">Спорт</button></li>
+      <li><button class="tag text-black" type="button">Мастер-классы</button></li>
+      <li><button class="tag text-black" type="button">Лекции</button></li>
+      <li><button class="tag text-black" type="button">Фестивали</button></li>
+      <li><button class="tag text-black" type="button">Концерты</button></li>
+      <li><button class="tag text-black" type="button">Шоу</button></li>
+      <li><button class="tag text-black" type="button">Театр</button></li>
+      <li><button class="tag text-black" type="button">Квизы</button></li>
+      <li><button class="tag text-black" type="button">Детям</button></li>
+      <li><button class="tag text-black" type="button">Анимация</button></li>
+      <li><button class="tag text-black" type="button">Благотворительная акция</button></li>
+      <li><button class="tag text-black" type="button">Выставки</button></li>
+      <li><button class="tag text-black" type="button">Экскурсии</button></li>
+      <li><button class="tag text-black" type="button">Диджей-сеты</button></li>
+      <li><button class="tag text-black" type="button">Вечеринки</button></li>
+      <li><button class="tag text-black" type="button">Больше</button></li>
+    </ul>
+
+    <div class="card-grid">
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/images/spotlight-2.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw"
+            width="402" height="230" alt="" loading="lazy" decoding="async" class="object-cover">
+          <span class="tag">Бесплатно</span>
+        </div>
+        <p class="label">Зона отдыха «Покровский берег»</p>
+        <h3 class="card-title"><a href="#">Золотая осень: выходные в парках Москвы</a></h3>
+        <p class="card-text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+        <p class="card-date"><time datetime="2026-10-12T12:00">12-13 октября, 12:00</time></p>
+        <ul class="tag-list" aria-label="Теги">
+          <li><a class="tag" href="#">Экскурсии</a></li>
+          <li><a class="tag" href="#">Выставки</a></li>
+          <li><a class="tag" href="#">Мастер-классы</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/images/event-2.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw"
+            width="402" height="230" alt="" loading="lazy" decoding="async" class="object-cover">
+        </div>
+        <p class="label">Парк Горького</p>
+        <h3 class="card-title"><a href="#">Экскурсия по осенним аллеям</a></h3>
+        <p class="card-text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+        <p class="card-date"><time datetime="2026-10-17T12:00">17 октября, 12:00</time></p>
+        <ul class="tag-list" aria-label="Теги">
+          <li><a class="tag" href="#">Экскурсии</a></li>
+          <li><a class="tag" href="#">Выставки</a></li>
+          <li><a class="tag" href="#">Мастер-классы</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/images/event-3.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw"
+            width="402" height="230" alt="" loading="lazy" decoding="async" class="object-cover">
+        </div>
+        <p class="label">5 парков</p>
+        <h3 class="card-title"><a href="#">Йога под осенним небом</a></h3>
+        <p class="card-text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+        <p class="card-date"><time datetime="2026-10-18T10:00">18 октября, 10:00</time></p>
+        <ul class="tag-list" aria-label="Теги">
+          <li><a class="tag" href="#">Спорт</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/images/event-4.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw"
+            width="402" height="230" alt="" loading="lazy" decoding="async" class="object-cover">
+        </div>
+        <p class="label">Коробковский сад</p>
+        <h3 class="card-title"><a href="#">Фестиваль «Осень в парках Москвы»</a></h3>
+        <p class="card-text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+        <p class="card-date"><time datetime="2026-09-19T12:00">19 сентября, 12:00</time></p>
+        <ul class="tag-list" aria-label="Теги">
+          <li><a class="tag" href="#">Фестивали</a></li>
+          <li><a class="tag" href="#">Концерты</a></li>
+          <li><a class="tag" href="#">Детям</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/images/event-5.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw"
+            width="402" height="230" alt="" loading="lazy" decoding="async" class="object-cover">
+          <span class="tag">Бесплатно</span>
+        </div>
+        <p class="label">Парк «Северное Тушино»</p>
+        <h3 class="card-title"><a href="#">Джаз в осеннем парке</a></h3>
+        <p class="card-text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+        <p class="card-date"><time datetime="2026-10-23T17:00">23 октября, 17:00</time></p>
+        <ul class="tag-list" aria-label="Теги">
+          <li><a class="tag" href="#">Концерты</a></li>
+          <li><a class="tag" href="#">Вечеринки</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/images/event-6.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw"
+            width="402" height="230" alt="" loading="lazy" decoding="async" class="object-cover">
+        </div>
+        <p class="label">5 парков</p>
+        <h3 class="card-title"><a href="#">Мастерская осеннего гербария</a></h3>
+        <p class="card-text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+        <p class="card-date"><time datetime="2026-10-23T12:00">23 октября, 12:00</time></p>
+        <ul class="tag-list" aria-label="Теги">
+          <li><a class="tag" href="#">Мастер-классы</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/images/event-7.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw"
+            width="402" height="230" alt="" loading="lazy" decoding="async" class="object-cover">
+          <span class="tag">Бесплатно</span>
+        </div>
+        <p class="label">Лианозовский парк</p>
+        <h3 class="card-title"><a href="#">Семейный квест «Тайны осени»</a></h3>
+        <p class="card-text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+        <p class="card-date"><time datetime="2026-10-24T11:00">24 октября, 11:00</time></p>
+        <ul class="tag-list" aria-label="Теги">
+          <li><a class="tag" href="#">Квест</a></li>
+          <li><a class="tag" href="#">Детям</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/images/event-8.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 85vw"
+            width="402" height="230" alt="" loading="lazy" decoding="async" class="object-cover">
+        </div>
+        <p class="label">Парк им. Юрия Лужкова</p>
+        <h3 class="card-title"><a href="#">Осенний забег по парку</a></h3>
+        <p class="card-text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+        <p class="card-date"><time datetime="2026-10-24T12:00">24 октября, 12:00</time></p>
+        <ul class="tag-list" aria-label="Теги">
+          <li><a class="tag" href="#">Спорт</a></li>
+          <li><a class="tag" href="#">Благотворительная акция</a></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="mt-8 flex justify-center">
+      <button class="btn btn-light px-12" type="button">
+        Показать ещё
+        <span class="icon">@@include('src/assets/icons/chevron-down.svg')</span>
+      </button>
+    </div>
+  </div>
+</section>

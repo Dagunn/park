@@ -1,0 +1,42 @@
+<section class="container-content" aria-labelledby="hero-title" data-hero>
+  <div class="hero-panel">
+    <div class="shape-notch shape-notch-hero hero-overlay" aria-hidden="true">
+      <img src="assets/images/hero.png" data-widths="768,1280,1680,1920" sizes="(min-width: 1920px) 1680px, 100vw"
+        width="1920" height="1080" alt="" fetchpriority="high" decoding="async" data-hero-photo data-active>
+      <img src="assets/images/hobby-5.png" data-widths="768,1356" sizes="(min-width: 1920px) 1680px, 100vw" width="1356"
+        height="776" alt="" fetchpriority="low" decoding="async" data-hero-photo>
+    </div>
+
+    <div class="relative flex flex-col items-start gap-heading-lg">
+      <div class="flex flex-col items-start gap-heading-lg" data-hero-slide>
+        <div class="flex flex-col gap-8">
+          <h1 id="hero-title" class="text-hero">Новая<br> городская привычка</h1>
+          <p class="text-card">Вместе создаем пространства для жизни,<br class="max-md:hidden"> вдохновения и общения
+          </p>
+        </div>
+        <a class="btn btn-glass" href="#events">Открыть осеннюю афишу</a>
+      </div>
+
+      <div class="flex flex-col items-start gap-heading-lg" data-hero-slide hidden>
+        <div class="flex flex-col gap-8">
+          <h2 class="text-hero">Парки<br> для всей семьи</h2>
+          <p class="text-card">Спорт, культура и отдых<br class="max-md:hidden"> в каждом округе Москвы</p>
+        </div>
+        <a class="btn btn-glass" href="#events">Смотреть афишу</a>
+      </div>
+
+      <div class="flex w-full items-center gap-6">
+        <div class="h-px flex-1 bg-white/40" aria-hidden="true"></div>
+        <p class="text-body" aria-live="polite" data-hero-counter>01 — 02</p>
+        <div class="flex gap-4">
+          <button class="btn btn-icon btn-glass" type="button" aria-label="Предыдущий слайд" data-hero-prev>
+            <span class="icon">@@include('src/assets/icons/arrow-long-left.svg')</span>
+          </button>
+          <button class="btn btn-icon btn-glass" type="button" aria-label="Следующий слайд" data-hero-next>
+            <span class="icon">@@include('src/assets/icons/arrow-long-right.svg')</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

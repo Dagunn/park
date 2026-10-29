@@ -1,0 +1,113 @@
+@layer components {
+  .card {
+    @apply relative flex flex-col gap-4 text-primary;
+  }
+
+  .card-media {
+    @apply relative aspect-[402/230] overflow-hidden bg-surface;
+  }
+
+  .card-media .tag {
+    @apply absolute bottom-2.5 left-2.5;
+  }
+
+  .card-title {
+    @apply text-card;
+  }
+
+  .card-title a {
+    @apply after:absolute after:inset-0 hover:underline;
+  }
+
+  .card-text {
+    @apply line-clamp-4 min-h-18.5 text-paragraph text-black;
+  }
+
+  .card-date {
+    @apply text-paragraph;
+  }
+
+  .card .tag-list {
+    @apply relative z-10;
+  }
+
+  .card-spotlight {
+    --card-bg: var(--color-primary);
+    --card-fg: var(--color-white);
+    --card-tilt: -8deg;
+
+    @apply relative flex aspect-[544/680] w-[min(544px,80vw)] shrink-0 flex-col gap-6 overflow-hidden p-card;
+    @apply bg-(--card-bg) text-(--card-fg);
+    rotate: var(--card-tilt);
+  }
+
+  .card-spotlight:nth-child(even) {
+    --card-tilt: 4deg;
+  }
+
+  .card-spotlight-media {
+    @apply relative min-h-0 flex-1 overflow-hidden;
+  }
+
+  .card-spotlight-media img,
+  .card-hobby-media img {
+    @apply absolute inset-0;
+  }
+
+  .card-hobby {
+    --card-bg: var(--color-primary);
+
+    @apply relative aspect-[402/580] overflow-hidden bg-surface;
+  }
+
+  .card-hobby-media {
+    @apply absolute inset-0 opacity-0 transition-opacity;
+  }
+
+  .card-hobby:hover .card-hobby-media,
+  .card-hobby:focus-within .card-hobby-media {
+    @apply opacity-100;
+  }
+
+  .card-hobby-body {
+    @apply absolute bottom-[15%] left-0 flex min-h-[28.3%] w-4/5 flex-col gap-6 bg-(--card-bg) p-card;
+  }
+
+  .card-tall {
+    @apply bottom-0 min-h-[58.6%] justify-between;
+  }
+
+  .decor-hobby-1 {
+    --decor: url('../assets/images/decor/hobby-1-decor.svg');
+    @apply -top-[3.19%] -left-[72.64%] h-[116.9%] w-[234.83%];
+  }
+
+  .decor-hobby-2 {
+    --decor: url('../assets/images/decor/hobby-2-decor.svg');
+    @apply -top-[90.86%] -left-[82.46%] h-[252.59%] w-[307.46%];
+  }
+
+  .decor-hobby-3 {
+    --decor: url('../assets/images/decor/hobby-3-decor.svg');
+    @apply -top-[18.62%] -left-[82.59%] h-[116.9%] w-[234.83%];
+  }
+
+  .decor-hobby-4 {
+    --decor: url('../assets/images/decor/hobby-4-decor.svg');
+    @apply -top-[66.72%] -left-[107.34%] h-[245.86%] w-[322.39%];
+  }
+
+  .decor-hobby-ribbon {
+    --decor: url('../assets/images/decor/hobby-ribbon.svg');
+    @apply -top-[12.59%] left-[12.44%] h-[95.17%] w-[150.25%];
+  }
+
+  .decor-hobby-ribbon-alt {
+    --decor: url('../assets/images/decor/hobby-ribbon.svg');
+    @apply -top-[12.59%] -left-[90.05%] h-[95.17%] w-[150.25%];
+  }
+
+  .card-partner {
+    @apply flex h-36 items-center justify-center bg-white/20;
+  }
+}

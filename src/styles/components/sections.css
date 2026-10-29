@@ -1,0 +1,58 @@
+@layer components {
+  .hero-panel {
+    @apply relative flex min-h-140 flex-col justify-end px-hero pb-10 text-white xl:min-h-185;
+  }
+
+  .journal-photo {
+    @apply absolute top-[7.8%] left-[48%] h-full w-[55.56%] origin-top-left rotate-5 overflow-hidden bg-black;
+  }
+
+  .journal-tag {
+    @apply absolute top-2;
+    left: calc(40px * var(--notch-scale));
+
+    @variant md {
+      top: calc(40px * var(--notch-scale));
+    }
+  }
+
+  .journal-brand {
+    @apply absolute flex flex-col;
+    top: calc(120px * var(--notch-scale));
+    left: calc(40px * var(--notch-scale));
+    gap: calc(18px * var(--notch-scale));
+  }
+
+  .journal-logo {
+    @apply h-auto;
+    width: max(96px, 173px * var(--notch-scale));
+  }
+
+  .journal-articles {
+    @apply flex flex-1 gap-grid overflow-hidden;
+  }
+
+  .journal-articles > * {
+    @apply shrink-0 grow-0 basis-full;
+
+    @variant sm {
+      flex-basis: calc(50% - var(--spacing-grid) / 2);
+    }
+  }
+
+  .about-text {
+    @apply flex flex-col items-start justify-center gap-12 xl:py-panel-y xl:pr-23;
+  }
+
+  .social-panel {
+    @apply relative flex flex-col justify-between gap-12 px-6 py-panel-y text-white md:px-15;
+  }
+
+  .subscribe-card {
+    @apply relative z-10 mx-auto mt-grid flex max-w-207 flex-col gap-10 bg-white px-panel-x py-panel-y xl:-mt-15;
+  }
+
+  .subscribe-mail {
+    @apply relative z-10 mx-auto -mt-7  block h-auto w-12 md:-mt-9 md:w-37;
+  }
+}

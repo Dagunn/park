@@ -1,0 +1,65 @@
+<header class="relative z-20 py-1">
+  <div class="container-header relative" data-menu>
+    <div class="header-panel">
+      <div class="header-utility">
+        <ul class="hidden flex-1 items-center gap-9 lg:flex">
+          <li>
+            <a class="flex items-center gap-3" href="#">
+              <span class="btn btn-icon-sm"><span class="icon">@@include('src/assets/icons/play.svg')</span></span>
+              Радио Парки
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-3" href="#">
+              <span class="btn btn-icon-sm"><span class="icon">@@include('src/assets/icons/play.svg')</span></span>
+              Подкасты
+            </a>
+          </li>
+        </ul>
+        <a class="flex items-center gap-2 px-6 max-md:ml-auto" href="#">
+          <span class="icon">@@include('src/assets/icons/search.svg')</span>
+          <span class="max-sm:sr-only">Поиск по сайту</span>
+        </a>
+        <a class="flex items-center gap-2 px-6" href="#">
+          <span class="icon">@@include('src/assets/icons/eye.svg')</span>
+          <span class="max-sm:sr-only">Версия для слабовидящих</span>
+        </a>
+      </div>
+
+      <div class="header-divider" aria-hidden="true"></div>
+
+      <div class="header-menu">
+        <a class="shrink-0" href="index.html" aria-label="Парки Москвы — на главную">
+          <img src="assets/images/logos/logo.svg" width="147" height="36" alt="Парки Москвы">
+        </a>
+
+        <button class="btn btn-icon btn-light ml-auto 2xl:hidden" type="button" aria-expanded="false"
+          aria-controls="main-nav" data-menu-toggle>
+          <span class="sr-only">Меню</span>
+          <span class="flex w-5 flex-col gap-1" aria-hidden="true">
+            <span class="h-0.5 bg-current"></span>
+            <span class="h-0.5 bg-current"></span>
+            <span class="h-0.5 bg-current"></span>
+          </span>
+        </button>
+
+        <nav id="main-nav" aria-label="Основное меню">
+          <ul class="nav-list">
+            <li><a class="btn btn-ghost" href="#">Об организации</a></li>
+            <li><a class="btn btn-ghost" href="#">Афиша</a></li>
+            <li><a class="btn btn-ghost" href="#">Медиа</a></li>
+            <li><a class="btn btn-ghost" href="#">Стать партнером</a></li>
+            <li><a class="btn btn-ghost" href="#">Открой бизнес</a></li>
+            <li>
+              <a class="btn btn-ghost" href="#">
+                К любимому парку
+                <span class="icon">@@include('src/assets/icons/heart.svg')</span>
+              </a>
+            </li>
+            <li><a class="btn btn-ghost" href="#">Инфраструктура</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

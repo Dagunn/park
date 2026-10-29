@@ -1,0 +1,125 @@
+<section class="xl:pb-8.5" aria-labelledby="map-title">
+  <div class="container-content map-layout">
+    <form class="map-filter" action="#" data-map-filter>
+      <h2 id="map-title" class="text-heading text-primary">Выберем<br> ваш Парк Москвы?</h2>
+
+      <div class="flex flex-col gap-12">
+        <!-- Связать с картой: $(select).on('select2:select', e => e.params.data.id), id = value из option.
+             Подсветка: data-filtered на [data-map], data-match на нужной отметке -->
+        <select class="select-line" name="park" aria-label="Парк" data-select data-width="100%">
+          @@include('src/partials/components/park-options.html')
+        </select>
+
+        <fieldset class="flex flex-col gap-4">
+          <legend class="label mb-4">Округа</legend>
+          <div class="flex flex-wrap gap-2">
+            <label class="chip"><input class="sr-only" type="checkbox" name="district"
+                value="central">Центральный</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="district" value="north">Северный</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="district"
+                value="north-east">Северо-Восточный</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="district" value="east">Восточный</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="district"
+                value="south-east">Юго-Восточный</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="district" value="south">Южный</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="district"
+                value="south-west">Юго-Западный</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="district" value="west">Западный</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="district"
+                value="north-west">Северо-Западный</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="district"
+                value="zelenograd">Зеленоградский</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="district" value="troitsk">Троицкий</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="district"
+                value="novomoskovsk">Новомосковский</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="flex flex-col gap-4">
+          <legend class="label mb-4">Интересы</legend>
+          <div class="flex flex-wrap gap-2">
+            <label class="chip"><input class="sr-only" type="checkbox" name="interest" value="culture">Культура</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="interest" value="family">Семейный
+              отдых</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="interest" value="sport">Спорт и активный
+              отдых</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="interest" value="kids">Детский
+              отдых</label>
+            <label class="chip"><input class="sr-only" type="checkbox" name="interest"
+                value="nature">Природно-исторический парк</label>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+
+    <div class="map-view" data-map>
+      <div class="map-canvas">
+        <img src="assets/images/map.png" data-widths="768,1088,1807" sizes="(min-width: 1280px) 1807px, 166vw"
+          width="1807" height="803" alt="Карта парков Москвы" loading="lazy" decoding="async">
+
+        <ul aria-label="Парки на карте">
+          <li class="map-marker" data-marker style="--x: 677; --y: 429" data-district="west" data-interests="nature sport"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48" alt="Парк, Западный округ">
+          </li>
+          <li class="map-marker" data-marker style="--x: 707; --y: 359" data-district="west" data-interests="family kids"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48" alt="Парк, Западный округ">
+          </li>
+          <li class="map-marker" data-marker style="--x: 747; --y: 339" data-district="north-west" data-interests="nature"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48"
+              alt="Парк, Северо-Западный округ"></li>
+          <li class="map-marker" data-marker style="--x: 801; --y: 358" data-district="north-west" data-interests="family sport">
+            <img class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48"
+              alt="Парк, Северо-Западный округ">
+          </li>
+          <li class="map-marker" data-marker style="--x: 857; --y: 309" data-district="north" data-interests="sport family"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48" alt="Парк, Северный округ">
+          </li>
+          <li class="map-marker" data-marker style="--x: 1137; --y: 349" data-district="east" data-interests="nature family"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48" alt="Парк, Восточный округ">
+          </li>
+          <li class="map-marker" data-marker style="--x: 939; --y: 381" data-district="central" data-interests="culture"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48"
+              alt="Парк, Центральный округ"></li>
+          <li class="map-marker" data-marker style="--x: 881; --y: 398" data-district="central" data-interests="culture kids"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48"
+              alt="Парк, Центральный округ"></li>
+          <li class="map-marker" data-marker style="--x: 979; --y: 421" data-district="south-east" data-interests="sport kids"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48"
+              alt="Парк, Юго-Восточный округ"></li>
+          <li class="map-marker" data-marker style="--x: 1018; --y: 538" data-district="south-east" data-interests="nature"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48"
+              alt="Парк, Юго-Восточный округ"></li>
+          <li class="map-marker" data-marker style="--x: 881; --y: 468" data-district="south-west" data-interests="culture nature">
+            <img class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48"
+              alt="Парк, Юго-Западный округ">
+          </li>
+          <li class="map-marker" data-marker style="--x: 921; --y: 458" data-district="south" data-interests="culture family"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48" alt="Парк, Южный округ"></li>
+          <li class="map-marker" data-marker style="--x: 951; --y: 488" data-district="south" data-interests="kids sport"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48" alt="Парк, Южный округ"></li>
+          <li class="map-marker" data-marker style="--x: 708; --y: 478" data-district="novomoskovsk" data-interests="family nature">
+            <img class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48"
+              alt="Парк, Новомосковский округ">
+          </li>
+          <li class="map-marker" data-marker style="--x: 658; --y: 458" data-district="troitsk" data-interests="nature sport"><img
+              class="map-pin" src="assets/images/decor/map-pin.svg" width="48" height="48" alt="Парк, Троицкий округ">
+          </li>
+          <li class="map-marker" data-marker style="--x: 939; --y: 391" data-district="central"
+            data-interests="culture family kids sport"><span class="map-cluster" role="img"
+              aria-label="4 парка, Центральный округ">4</span></li>
+          <li class="map-marker" data-marker style="--x: 1069; --y: 291" data-district="north-east" data-interests="nature family">
+            <span class="map-cluster" role="img" aria-label="2 парка, Северо-Восточный округ">2</span>
+          </li>
+        </ul>
+      </div>
+      <div class="map-zoom">
+        <button class="btn btn-icon btn-light" type="button" aria-label="Приблизить">
+          <span class="icon">@@include('src/assets/icons/plus.svg')</span>
+        </button>
+        <button class="btn btn-icon btn-light" type="button" aria-label="Отдалить">
+          <span class="icon">@@include('src/assets/icons/minus.svg')</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

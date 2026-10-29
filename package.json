@@ -1,0 +1,28 @@
+{
+  "name": "parki-moskvy",
+  "private": true,
+  "description": "Парки Москвы — статическая HTML-верстка на Tailwind CSS 4 и Gulp",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --production",
+    "clean": "gulp clean"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-postcss": "^10.0.0",
+    "postcss": "^8.5.32",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3"
+  },
+  "dependencies": {
+    "jquery": "3.7.1",
+    "select2": "4.1.0"
+  }
+}

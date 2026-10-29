@@ -1,0 +1,50 @@
+@theme {
+  --color-*: initial;
+
+  --color-primary: #0d483b;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-ink: #000e33;
+  --color-muted: #727874;
+
+  --color-surface: #e1eae8;
+  --color-surface-alt: #f6f8f7;
+  --color-green: #008e1c;
+
+  --color-accent-cyan: #1eb9cb;
+  --color-accent-violet: #b78bff;
+  --color-accent-orange: #ff871c;
+  --color-accent-yellow: #ffc507;
+  --color-accent-red: #ee362a;
+  --color-accent-lime: #7ec730;
+
+  --color-hero-base: #141414;
+  --color-hero-tint: #447c9a;
+
+  --font-sans:
+    "PT Root UI", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    sans-serif;
+
+  --container-content: 1680px;
+  --container-header: 1728px;
+
+  --spacing-tag: 24px;
+
+  --radius-tag: 4px;
+  --radius-icon: 8px;
+  --radius-button: 16px;
+  --radius-pill: 24px;
+
+  --shadow-pin: 0 12px 24px rgb(0 0 0 / 0.16);
+  --blur-glass: 24px;
+
+  --default-transition-duration: 300ms;
+
+  --animate-marquee: marquee 90s linear infinite;
+
+  @keyframes marquee {
+    to {
+      translate: -50%;
+    }
+  }
+}

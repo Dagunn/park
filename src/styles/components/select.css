@@ -1,0 +1,60 @@
+@layer components {
+  /* Тема select2 (theme: 'park'). Поле берет классы исходного select */
+
+  /* Перебиваем высоту и отступы из select2.css */
+  .select2-container--park .select2-selection--single {
+    @apply flex h-control;
+  }
+
+  .select2-container--park .select2-selection--single .select2-selection__rendered {
+    @apply truncate p-0;
+  }
+
+  .select2-container--park .select2-selection__arrow {
+    @apply hidden;
+  }
+
+  .select2-container--park.select2-container--open .select2-selection {
+    background-image: url("../assets/icons/chevron-up.svg");
+  }
+
+  .select2-container--park .select2-dropdown {
+    @apply overflow-hidden rounded-button border-0 bg-white shadow-pin;
+  }
+
+  .select2-container--park .select2-dropdown--below {
+    @apply translate-y-2;
+  }
+
+  .select2-container--park .select2-dropdown--above {
+    @apply -translate-y-2;
+  }
+
+  .select2-container--park .select2-search--dropdown {
+    @apply p-2;
+  }
+
+  .select2-container--park .select2-search__field {
+    @apply h-control-sm rounded-icon border border-surface px-3 text-body text-black outline-none focus:border-primary;
+  }
+
+  .select2-container--park .select2-results__options {
+    @apply max-h-72 overflow-y-auto pb-2;
+  }
+
+  .select2-container--park .select2-results__option {
+    @apply px-5 py-3 text-body text-black;
+  }
+
+  .select2-container--park .select2-results__option--selected {
+    @apply text-primary;
+  }
+
+  .select2-container--park .select2-results__option--highlighted {
+    @apply bg-surface;
+  }
+
+  .select2-container--park .select2-results__message {
+    @apply text-muted;
+  }
+}

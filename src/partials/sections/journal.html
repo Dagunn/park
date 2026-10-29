@@ -1,0 +1,74 @@
+
+<section class="section-sm bg-fade-to-surface-alt" aria-labelledby="journal-title">
+  <div class="container-content">
+    <div class="section-head">
+      <h2 id="journal-title" class="section-title">Новый выпуск журнала</h2>
+      <p class="section-lead md:max-w-150">Истории парков, маршруты, интервью с горожанами и новые городские
+        привычки — в каждом выпуске</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-grid xl:grid-cols-2">
+      <a class="relative block aspect-828/656 text-white" href="#">
+        <div class="shape-notch absolute inset-0 bg-green" aria-hidden="true">
+          <div class="pattern pattern-journal"></div>
+          <div class="journal-photo">
+            <img src="assets/images/journal-cover.png" data-widths="515,638" sizes="(min-width: 1280px) 515px, 60vw"
+              width="638" height="852" alt="" loading="lazy" decoding="async" class="object-cover">
+          </div>
+        </div>
+        <span class="tag journal-tag">Осень 2026</span>
+        <span class="journal-brand">
+          <span class="label">Журнал</span>
+          <img class="journal-logo" src="assets/images/logos/journal-logo.svg" width="173" height="48" alt="Парки Москвы">
+        </span>
+      </a>
+
+      <div class="flex flex-col gap-2.5" data-carousel>
+        <div class="journal-articles" data-carousel-track>
+          <article class="card">
+            <div class="card-media">
+              <img src="assets/images/journal-1.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 100vw"
+                width="402" height="230" alt="" loading="lazy" decoding="async" class="object-cover">
+            </div>
+            <p class="label">Статьи <span aria-hidden="true">◆</span> 5 парков</p>
+            <h3 class="card-title"><a href="#">Осенний гербарий своими руками</a></h3>
+            <p class="card-text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+            <p class="card-date"><time datetime="2026-10-10">10 октября 2026</time></p>
+            <ul class="tag-list" aria-label="Теги">
+              <li><a class="tag" href="#">Спорт</a></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="assets/images/journal-2.png" data-widths="402,804" sizes="(min-width: 1280px) 402px, (min-width: 640px) 50vw, 100vw"
+                width="402" height="230" alt="" loading="lazy" decoding="async" class="object-cover">
+            </div>
+            <p class="label">Статьи <span aria-hidden="true">◆</span> Коробковский сад</p>
+            <h3 class="card-title"><a href="#">Золотая осень: 5 маршрутов по паркам Москвы</a></h3>
+            <p class="card-text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+            <ul class="tag-list" aria-label="Теги">
+              <li><a class="tag" href="#">Фестивали</a></li>
+              <li><a class="tag" href="#">Концерты</a></li>
+              <li><a class="tag" href="#">Детям</a></li>
+            </ul>
+          </article>
+        </div>
+        <div class="flex justify-between gap-6 md:justify-end">
+          <div class="flex gap-4">
+            <button class="btn btn-icon btn-light" type="button" aria-label="Назад" data-carousel-prev>
+              <span class="icon">@@include('src/assets/icons/arrow-long-left.svg')</span>
+            </button>
+            <button class="btn btn-icon btn-light" type="button" aria-label="Вперед" data-carousel-next>
+              <span class="icon">@@include('src/assets/icons/arrow-long-right.svg')</span>
+            </button>
+          </div>
+          <a class="btn btn-light btn-arrow" href="#">
+            Все статьи
+            <span class="icon">@@include('src/assets/icons/arrow-long-right.svg')</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+@utility bg-fade-to-surface {
+  background-image: linear-gradient(to bottom, transparent 62%, var(--color-surface));
+}
+
+@utility bg-fade-from-surface {
+  background-image: linear-gradient(to bottom, var(--color-surface), transparent 16%);
+}
+
+@utility bg-fade-to-surface-alt {
+  background-image: linear-gradient(to bottom, transparent, var(--color-surface-alt));
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Цвет карточки: card-bg-accent-cyan, card-fg-primary */
+@utility card-bg-* {
+  --card-bg: --value(--color-*);
+}
+
+@utility card-fg-* {
+  --card-fg: --value(--color-*);
+}

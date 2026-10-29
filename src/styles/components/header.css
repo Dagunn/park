@@ -1,0 +1,29 @@
+@layer components {
+  .header-panel {
+    @apply flex flex-col gap-1 rounded-pill p-1;
+  }
+
+  .header-utility {
+    @apply flex h-control items-center gap-6 pl-3 text-body text-muted xl:pl-6 justify-end;
+  }
+
+  .header-utility a {
+    @apply hover:text-primary;
+  }
+
+  .header-menu {
+    @apply flex h-20 items-center justify-between gap-5 py-3 pl-3 xl:pl-6;
+  }
+
+  .header-divider {
+    @apply mx-6 h-px bg-surface;
+  }
+
+  .nav-list {
+    @apply hidden 2xl:flex 2xl:items-center;
+  }
+
+  [data-menu][data-open] .nav-list {
+    @apply absolute inset-x-0 top-full mt-2 flex flex-col items-stretch rounded-pill bg-white p-2 shadow-pin;
+  }
+}
