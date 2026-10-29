@@ -59,17 +59,12 @@ gulpfile.js                  сборка
 Выпадающие списки «Все парки Москвы» (Афиша и карта) — `<select>` + select2 4.1.0 с поиском и русской локализацией. select2 требует jQuery, подключена 3.7.1. Обе библиотеки ставятся из npm и при сборке копируются в `dist/js/vendor/`.
 
 - Тема оформления — `theme: 'park'`, стили в `src/styles/components/select.css`. Поле select2 получает классы исходного `<select>` (`.select` или `.select-line`), поэтому без JS список выглядит так же.
-- Ширина задаётся атрибутом `data-width` на `<select>` (`auto` в Афише, `100%` на карте).
-- События select2 слушаются **через jQuery**, обычный `addEventListener('change')` при выборе через select2 не сработает:
-
-```js
-$('select[data-select]').on('select2:select', (e) => console.log(e.params.data.id));
-```
+- События select2 слушаются **через jQuery**, обычный `addEventListener('change')` при выборе через select2 не сработает.
 
 ## Уточнения
 
 - **Хлебные крошки.** На главной их нет. На внутренних страницах ставить между `</header>` и `<main>`, не внутри контента — место отмечено комментарием в `src/index.html`.
 - **Второй слайд hero** (`src/partials/sections/hero.html`) — заглушка: фото и текст. В макете нарисован только первый.
-- **Список парков** (`src/partials/components/park-options.html`) — заглушка, заменить данными сайта. `value` у `<option>` — идентификатор парка.
-- **Карта** (`src/partials/sections/map.html`) — статичная картинка из макета. На сайте заменить на Яндекс Карту. Округа и интересы у отметок (`data-district`, `data-interests`) — условные. Чтобы связать выбор парка со списком: слушать `select2:select`, на `[data-map]` поставить `data-filtered`, на нужной отметке — `data-match` (стили подсветки уже есть в `map.css`).
+- **Список парков** (`src/partials/components/park-options.html`) — заглушка. `value` у `<option>` — идентификатор парка.
+- **Карта** (`src/partials/sections/map.html`) — статичная картинка из макета.Округа и интересы у отметок (`data-district`, `data-interests`) — условные.
 - **Ссылки** ведут на `#`
